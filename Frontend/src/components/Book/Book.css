@@ -1,0 +1,87 @@
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+li {
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+  height: 480px;
+  max-width: 250px;
+
+  list-style-type: none;
+  margin-bottom: 160px;
+}
+
+.card {
+  margin: auto;
+  padding: 5px;
+  height: 130%;
+  width: 100%;
+  box-shadow: 5px 5px 10px #ccc;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  /* Add margin to the bottom of the card */
+}
+
+.card>img {
+  width: 100%;
+  height: 310px;
+  /* Reduced height for the image */
+  object-fit: cover;
+}
+
+.card article {
+  padding: 5px;
+  /* Limit the description to 3 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card p {
+  padding: 3px;
+  /* Set a maximum height for the description */
+  max-height: 4.5em;
+  /* (1.5em x 3 lines) */
+  line-height: 1.5em;
+  /* Add ellipsis when text overflows */
+  text-overflow: ellipsis;
+  white-space: initial;
+  overflow: hidden;
+}
+
+/* Adjust button styles */
+.card .buttons {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  /* Add some spacing between buttons */
+}
+
+.card .buttons button {
+  padding: 8px 12px;
+}
+
+.card .buttons button:first-child {
+  background-color: #1976d2;
+  color: #fff;
+}
+
+.card .buttons button:last-child {
+  background-color: #f44336;
+  color: #fff;
+}
+
+/* Style for the "Update" button */
+.card .buttons button:nth-child(2) {
+  background-color: #4caf50;
+  color: #fff;
+}
